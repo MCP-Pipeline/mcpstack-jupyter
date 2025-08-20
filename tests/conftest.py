@@ -1,7 +1,7 @@
+import contextlib
 import sys
 import types
-import contextlib
-from typing import Iterable
+from collections.abc import Iterable
 
 import pytest
 
@@ -11,6 +11,7 @@ from mcpstack_jupyter.tools.jupyter.utils.config_loader import load_known_tools
 def _make_fn(name: str):
     def _fn(*args, **kwargs):
         return {"__tool_name__": name}
+
     _fn.__name__ = name
     return _fn
 

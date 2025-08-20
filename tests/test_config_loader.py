@@ -1,8 +1,9 @@
 from mcpstack_jupyter.tools.jupyter.utils.config_loader import (
-    load_known_tools,
-    load_env_defaults,
     load_cli_defaults,
+    load_env_defaults,
+    load_known_tools,
 )
+
 
 def test_known_tools_and_read_only_lists():
     data = load_known_tools()
@@ -12,6 +13,7 @@ def test_known_tools_and_read_only_lists():
     assert "append_markdown_cell" in known
     assert "read_all_cells" in known
     assert set(ro).issubset(set(known))
+
 
 def test_env_and_cli_defaults_present():
     env = load_env_defaults()

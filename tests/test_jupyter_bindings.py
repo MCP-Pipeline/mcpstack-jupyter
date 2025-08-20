@@ -41,14 +41,23 @@ def test_missing_upstream_tool_raises_attribute_error(known_tools):
 def test_env_mapping_defaults_and_overrides(monkeypatch, known_tools):
     defaults = load_env_defaults()
     with install_fake_jupyter_server(known_tools) as server:
-        for k in ["PROVIDER","DOCUMENT_URL","DOCUMENT_ID","DOCUMENT_TOKEN",
-                  "RUNTIME_URL","RUNTIME_ID","RUNTIME_TOKEN"]:
+        for k in [
+            "PROVIDER",
+            "DOCUMENT_URL",
+            "DOCUMENT_ID",
+            "DOCUMENT_TOKEN",
+            "RUNTIME_URL",
+            "RUNTIME_ID",
+            "RUNTIME_TOKEN",
+        ]:
             monkeypatch.delenv(k, raising=False)
         tool = Jupyter()
         tool.initialize()
 
         assert server.PROVIDER == defaults.get("provider", "jupyter")
-        assert server.DOCUMENT_URL == defaults.get("document_url", "http://127.0.0.1:8888")
+        assert server.DOCUMENT_URL == defaults.get(
+            "document_url", "http://127.0.0.1:8888"
+        )
         assert server.DOCUMENT_ID == defaults.get("document_id", "notebook.ipynb")
         assert server.RUNTIME_URL == defaults.get("runtime_url") or server.DOCUMENT_URL
 
