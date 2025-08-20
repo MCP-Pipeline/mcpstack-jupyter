@@ -1521,7 +1521,7 @@ dependencies = [
     { name = "typer" },
 ]
 
-[package.optional-dependencies]
+[package.dev-dependencies]
 dev = [
     { name = "pre-commit" },
     { name = "pytest" },
@@ -1538,15 +1538,18 @@ requires-dist = [
     { name = "jupyter-mcp-server", specifier = ">=0.11.0" },
     { name = "jupyterlab", specifier = "==4.4.1" },
     { name = "mcpstack", specifier = ">=0.0.2" },
-    { name = "pre-commit", marker = "extra == 'dev'", specifier = ">=3.0.0" },
-    { name = "pytest", marker = "extra == 'dev'", specifier = ">=7.4" },
     { name = "rich", specifier = ">=13.0.0" },
     { name = "rich-argparse", specifier = ">=1.4.0" },
     { name = "rich-pyfiglet", specifier = ">=1.0.0" },
-    { name = "ruff", marker = "extra == 'dev'", specifier = ">=0.4.0" },
     { name = "typer", specifier = ">=0.9.0" },
 ]
-provides-extras = ["dev"]
+
+[package.metadata.requires-dev]
+dev = [
+    { name = "pre-commit", specifier = ">=3.0.0" },
+    { name = "pytest", specifier = ">=7.4" },
+    { name = "ruff", specifier = ">=0.4.0" },
+]
 
 [[package]]
 name = "mdurl"
