@@ -3,9 +3,9 @@ requires = ["pdm-backend"]
 build-backend = "pdm.backend"
 
 [project]
-name = "mcpstack-your-tool-name"
-version = "0.1.0"
-description = "Create your MCPStack tool with this template repository!"
+name = "mcpstack-jupyter"
+dynamic = ["version"]
+description = "MCPStack delegator for jupyter-mcp-server (Option A: reuse their tools verbatim)."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
@@ -18,6 +18,11 @@ dependencies = [
   "rich-argparse>=1.4.0",
   "rich-pyfiglet>=1.0.0",
   "click>=8.1.8",
+  "jupyter-mcp-server>=0.11.0",
+  "jupyterlab==4.4.1",
+  "jupyter-collaboration==4.0.2",
+  "ipykernel",
+  "datalayer_pycrdt==0.12.17",
   "mcpstack>=0.0.2",
 ]
 
@@ -28,13 +33,18 @@ dev = [
   "pre-commit>=3.0.0"
 ]
 
-# Let MCPStack discover external tools via entry points
 [project.entry-points."mcpstack.tools"]
-your_tool_name = "mcpstack_your_tool_name.tool:YourTool"
+jupyter = "mcpstack_jupyter.tools.jupyter.jupyter:Jupyter"
 
-# Let MCPStack discover tool-specific CLIs (mounted by the mother library)
 [project.entry-points."mcpstack.tool_clis"]
-your_tool_name = "mcpstack_your_tool_name.cli:YourToolCLI.get_app"
+jupyter = "mcpstack_jupyter.tools.jupyter.cli:JupyterCLI.get_app"
+
+[tool.pdm.build]
+includes = ["src/mcpstack_jupyter/configuration/**"]
+
+[tool.pdm.version]
+source = "file"
+path = "src/mcpstack_jupyter/__init__.py"
 
 [tool.ruff]
 line-length = 88
