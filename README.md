@@ -237,6 +237,11 @@ See more in [the official Jupyter MCP Server documentation](https://jupyter-mcp-
 
 ---
 
+## 📽️ Video Demo
+
+<video src="https://github.com/user-attachments/assets/0e1adc61-a0fa-47e0-8c71-bc96a227b68c" width="320" height="240" controls></video>
+
+
 ## 🔐 License
 
 MIT — see **[LICENSE](LICENSE)**.
