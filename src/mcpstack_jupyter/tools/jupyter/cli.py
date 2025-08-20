@@ -12,8 +12,8 @@ from rich.panel import Panel
 from rich.table import Table
 
 from mcpstack_jupyter.tools.jupyter.utils.config_loader import (
-    load_env_defaults,
     load_cli_defaults,
+    load_env_defaults,
     load_known_tools,
 )
 
@@ -37,8 +37,12 @@ class JupyterCLI(BaseToolCLI):
             pretty_exceptions_show_locals=False,
             rich_markup_mode="markdown",
         )
-        app.command(help="Configure the Jupyter tool (Token,Provider,Kernel, etc.).")(cls.configure)
-        app.command(help="Display the current status of the Jupyter tool (Validate with Original Library, etc.")(cls.status)
+        app.command(help="Configure the Jupyter tool (Token,Provider,Kernel, etc.).")(
+            cls.configure
+        )
+        app.command(
+            help="Display the current status of the Jupyter tool (Validate with Original Library, etc."
+        )(cls.status)
         return app
 
     @classmethod

@@ -1,21 +1,26 @@
 import importlib
 import os
-from typing import Any, Dict, List, Optional, Callable
+from collections.abc import Callable
+from typing import Any, ClassVar
 
 from beartype import beartype
 from MCPStack.core.tool.base import BaseTool
-from mcpstack_jupyter.tools.jupyter.utils.config_loader import load_env_defaults, load_known_tools
+
+from mcpstack_jupyter.tools.jupyter.utils.config_loader import (
+    load_env_defaults,
+    load_known_tools,
+)
 
 
 @beartype
 class Jupyter(BaseTool):
-    KNOWN_TOOLS: List[str] = []
+    KNOWN_TOOLS: ClassVar[list[str]] = []
 
-    def __init__(self, include: Optional[List[str]] = None) -> None:
+    def __init__(self, include: list[str] | None = None) -> None:
         super().__init__()
         self.include = include
         self._server = None
-        self._bound: List[Callable[..., Any]] = []
+        self._bound: list[Callable[..., Any]] = []
 
         env_cfg = load_env_defaults()
         self._env_defaults = env_cfg
@@ -42,14 +47,14 @@ class Jupyter(BaseTool):
     def _post_load(self) -> None:
         pass
 
-    def actions(self) -> List[Callable[..., Any]]:
+    def actions(self) -> list[Callable[..., Any]]:
         return list(self._bound)
 
-    def to_dict(self) -> Dict[str, Any]:
+    def to_dict(self) -> dict[str, Any]:
         return {"include": self.include}
 
     @classmethod
-    def from_dict(cls, params: Dict[str, Any]) -> "Jupyter":
+    def from_dict(cls, params: dict[str, Any]) -> "Jupyter":
         return cls(include=params.get("include"))
 
     def _import_and_bind(self) -> None:

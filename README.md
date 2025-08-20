@@ -31,12 +31,12 @@ This repository provides an **MCPStack tool that wraps the official Python Jupyt
 
 - Upstream project: [datalayer/jupyter-mcp-server](https://github.com/datalayer/jupyter-mcp-server)
 - We **reuse their MCP actions** and surface them through **MCPStack**.
-- As the upstream evolves, **some actions / endpoints may deprecate**. Our wrapper is intentionally lightweight, so updating to new upstream versions should be straightforward.  
+- As the upstream evolves, **some actions / endpoints may deprecate**. Our wrapper is intentionally lightweight, so updating to new upstream versions should be straightforward.
   If you hit an incompatibility, **please open an issue** and we’ll track an update to align with the Jupyter MCP Server.
 
 ### What is MCPStack, in layman’s terms?
 
-The **Model Context Protocol (MCP)** standardises how tools talk to LLMs.  
+The **Model Context Protocol (MCP)** standardises how tools talk to LLMs.
 `MCPStack` lets you **stack multiple MCP tools together** into a pipeline and expose them to an LLM host (e.g., Claude Desktop).
 
 Think **scikit-learn pipelines, but for LLM tooling**:
@@ -96,7 +96,7 @@ uv run jupyter lab \
 ```
 
 > [!NOTE]
-> Docs reference: https://jupyter-mcp-server.datalayer.tech/jupyter/  
+> Docs reference: https://jupyter-mcp-server.datalayer.tech/jupyter/
 
 Make sure to have a notebook open in Jupyter lab, e.g., `notebook.ipynb` or whatever you have defined in the configuration.
 
@@ -108,7 +108,7 @@ Use the tool’s CLI to create a small `MCPStack ToolConfig` JSON. **At minimum 
 uv run mcpstack tools jupyter configure \
   --token MY_TOKEN \
   --output jupyter_config.json
-  
+
 # MY_TOKEN can for instance be: 1117bf468693444a5608e882ab3b55d511f354a1750df02 (must match the Jupyter server token)
 ```
 
@@ -170,7 +170,7 @@ Tokens remain **required** and are enforced upfront by MCPStack when building th
 
 ## 📖 Programmatic API
 
-Use the `Jupyter` tool class directly in a pipeline.  
+Use the `Jupyter` tool class directly in a pipeline.
 Tokens are taken from the environment (the pipeline config or your process env):
 
 ```python
@@ -195,33 +195,33 @@ pipeline = (
 
 >[!NOTE]
 > Common upstream actions you can expose (see `configuration/tools.yaml`):
-> 
-> - `append_markdown_cell`, 
-> - `insert_markdown_cell`, 
-> - `overwrite_cell_source`, 
+>
+> - `append_markdown_cell`,
+> - `insert_markdown_cell`,
+> - `overwrite_cell_source`,
 > - `delete_cell`
-> - `append_execute_code_cell`, 
+> - `append_execute_code_cell`,
 > - `insert_execute_code_cell`
-> - `execute_cell_with_progress`, 
-> - `execute_cell_simple_timeout`, 
+> - `execute_cell_with_progress`,
+> - `execute_cell_simple_timeout`,
 > - `execute_cell_streaming`
-> - `read_cell`, 
-> - `read_all_cells`, 
+> - `read_cell`,
+> - `read_all_cells`,
 > - `get_notebook_info`
 
 ---
 
 ## 🧰 Troubleshooting
 
-- **403 Forbidden / `_xsrf` missing / cannot create kernels**  
-  Ensure you ran Jupyter with a token and that your `ToolConfig` provides **both** `DOCUMENT_TOKEN` and `RUNTIME_TOKEN`.  
+- **403 Forbidden / `_xsrf` missing / cannot create kernels**
+  Ensure you ran Jupyter with a token and that your `ToolConfig` provides **both** `DOCUMENT_TOKEN` and `RUNTIME_TOKEN`.
   In most setups it’s the same token.
 
-- **404 on `notebook.ipynb`**  
+- **404 on `notebook.ipynb`**
   Update `--document-id` to the actual notebook path relative to Jupyter’s working directory (e.g., `Untitled.ipynb` or `notebooks/analysis.ipynb`).
 
-- **Nothing happens in Lab**  
-  Prefer `http://127.0.0.1:8888` over `http://localhost:8888`.  
+- **Nothing happens in Lab**
+  Prefer `http://127.0.0.1:8888` over `http://localhost:8888`.
   Confirm your pipeline is running and that the tool is listed in `mcpstack list-tools`.
 
 ---
