@@ -39,9 +39,6 @@ jupyter = "mcpstack_jupyter.tools.jupyter.jupyter:Jupyter"
 [project.entry-points."mcpstack.tool_clis"]
 jupyter = "mcpstack_jupyter.tools.jupyter.cli:JupyterCLI.get_app"
 
-[tool.pdm.build]
-includes = ["src/mcpstack_jupyter/configuration/**"]
-
 [tool.pdm.version]
 source = "file"
 path = "src/mcpstack_jupyter/__init__.py"
