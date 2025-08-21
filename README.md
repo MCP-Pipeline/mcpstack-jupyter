@@ -239,8 +239,18 @@ See more in [the official Jupyter MCP Server documentation](https://jupyter-mcp-
 
 ## 📽️ Video Demo
 
-<video src="https://github.com/user-attachments/assets/0e1adc61-a0fa-47e0-8c71-bc96a227b68c" width="320" height="240" controls></video>
+<div style="display: inline-flex; align-items: center;">
+  <!-- Video Thumbnail -->
+  <a href="https://www.youtube.com/embed/MkjMfFPFUXo?si=HMaOIeUlwEpHquJj" target="_blank" style="display: inline-block;">
+    <img src="https://img.youtube.com/vi/MkjMfFPFUXo/0.jpg" style="width: 100%; display: block;">
+  </a>
 
+  <!-- Play Button -->
+  <a href="https://www.youtube.com/embed/MkjMfFPFUXo?si=HMaOIeUlwEpHquJj" target="_blank" style="display: inline-block;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_play_button_icon_%282013%E2%80%932017%29.svg"
+         style="width: 50px; height: auto; margin-left: 5px;">
+  </a>
+</div>
 
 ## 🔐 License
 
