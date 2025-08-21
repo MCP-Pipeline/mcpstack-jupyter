@@ -5,7 +5,7 @@ build-backend = "pdm.backend"
 [project]
 name = "mcpstack-jupyter"
 dynamic = ["version"]
-description = "MCPStack delegator for jupyter-mcp-server (Option A: reuse their tools verbatim)."
+description = "[MCP Tool] Jupyter, let the LLM perform Jupyter Notebook reproducible analysis — Derived from the official Jupyter MCP Server by @datalayer.tech"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
