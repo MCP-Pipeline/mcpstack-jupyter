@@ -20,7 +20,7 @@ dependencies = [
   "click>=8.1.8",
   "jupyter-mcp-server>=0.11.0",
   "jupyterlab==4.4.1",
-  "jupyter-collaboration==4.0.2",
+  "jupyter-collaboration==3.1.2",
   "ipykernel",
   "datalayer_pycrdt==0.12.17",
   "mcpstack>=0.0.2",

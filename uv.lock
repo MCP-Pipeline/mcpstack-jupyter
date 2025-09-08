@@ -1069,26 +1069,25 @@ wheels = [
 
 [[package]]
 name = "jupyter-collaboration"
-version = "4.0.2"
+version = "3.1.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jupyter-collaboration-ui" },
     { name = "jupyter-docprovider" },
     { name = "jupyter-server-ydoc" },
-    { name = "jupyterlab" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c2/51/13b6dc5e5b0c4435109b2acf1f3f65d3f31abf5c51809646b1d6124ebe12/jupyter_collaboration-4.0.2.tar.gz", hash = "sha256:3172858aec0edfa4d91ac2e57a6454bb2d38256fc60963157604412054d0ba21", size = 3571, upload-time = "2025-04-22T16:05:05.01Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/3b/58/9694cedf52019b1c478800cb19c109fd3cc171dc4c81954541c81b631a06/jupyter_collaboration-3.1.2.tar.gz", hash = "sha256:44fc022b4a4f17362a4ba80a50592f4599ce3c04ef65f5cd2b5ed503a362db41", size = 3547, upload-time = "2025-04-09T17:41:10.608Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9c/91/bc81ac074e6e83c691d774d83991444c15d0946298be812c580039d7d451/jupyter_collaboration-4.0.2-py3-none-any.whl", hash = "sha256:8deff0aa53246bafd2b1a18ad5c5e145609111cc295a788420c79ab43ffccaa8", size = 4641, upload-time = "2025-04-22T16:05:03.645Z" },
+    { url = "https://files.pythonhosted.org/packages/50/c3/060967b1ca6d3cb44cede6e5cd9e805607873d38f44ee408a2c95f68b84b/jupyter_collaboration-3.1.2-py3-none-any.whl", hash = "sha256:7b9a04b5ea434d166ceece2e399f95b525598c5dabd3746f4c27c1969aa35231", size = 4629, upload-time = "2025-04-09T17:41:08.802Z" },
 ]
 
 [[package]]
 name = "jupyter-collaboration-ui"
-version = "2.1.0"
+version = "1.1.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/65/1a/3ed75112dba59a281d4e4d4cf9ad7fa69d4344e440e1f8f7caa38c67e537/jupyter_collaboration_ui-2.1.0.tar.gz", hash = "sha256:11aa170ccd64729cd7c91144b4ff4d2e8d90027d54e38157017eb535e99d7cc9", size = 72606, upload-time = "2025-07-02T12:39:14.953Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/cf/7e/45a1858909862c77e1fe4f2da3cc1f6b401733cc9589879757f28b4c5c56/jupyter_collaboration_ui-1.1.2.tar.gz", hash = "sha256:5f4128379da255f121da9edee204f17311c8d021005a25d3996d22f95a8645ff", size = 63860, upload-time = "2025-04-09T17:40:37.803Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/1e/19/e3034a0cc40aefe71d518ab1a65be0a22c7fca58a2a1b43edd4885a39a69/jupyter_collaboration_ui-2.1.0-py3-none-any.whl", hash = "sha256:6bdffe0a46590b7e0e83f8273b886e5387aaa92aff629090404dcd078aade091", size = 45520, upload-time = "2025-07-02T12:39:12.958Z" },
+    { url = "https://files.pythonhosted.org/packages/3b/20/c3a6a92f86f8eded332a8723976a9ad1d7e988034c9ca634cfa467418290/jupyter_collaboration_ui-1.1.2-py3-none-any.whl", hash = "sha256:bd54191e64751ff168f763ed4e35af528ca59a8bbe8407584916d1d59fe6ff4e", size = 41678, upload-time = "2025-04-09T17:40:35.804Z" },
 ]
 
 [[package]]
@@ -1107,11 +1106,11 @@ wheels = [
 
 [[package]]
 name = "jupyter-docprovider"
-version = "2.1.0"
+version = "1.1.2"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/db/3f/7f35065d345953c87d5b23ffb6fc3657da12a7689d953662a1e48bd39cbc/jupyter_docprovider-2.1.0.tar.gz", hash = "sha256:8af661c65300334577fa2e26a65b6086fbf6674d6296ddebbfafd74d418c94d3", size = 45323, upload-time = "2025-07-02T12:39:30.405Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/fe/29/1226382335a4fb494e375914361305b4c55e719761459c59acd4bcf93fa6/jupyter_docprovider-1.1.2.tar.gz", hash = "sha256:9bf6723a8257ccd60a7c47b7a72194ab03f3475607d43121b9a5ae91aaaa3e29", size = 44567, upload-time = "2025-04-09T17:40:55.292Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/74/2b/b441e33044ecc44406242acc221f66ed0bf08e6ff4af143718e6cc70ab10/jupyter_docprovider-2.1.0-py3-none-any.whl", hash = "sha256:4b640b4f1c7083815734a61a044b787c71b4d136ecd002ecaf053d2e0e9eee81", size = 34611, upload-time = "2025-07-02T12:39:28.891Z" },
+    { url = "https://files.pythonhosted.org/packages/cd/7c/305cd99ba0a94b2b23d1a7eb8eef8f8cf9151951b649c607090a23fd451c/jupyter_docprovider-1.1.2-py3-none-any.whl", hash = "sha256:0b5691cba281e2fbd6af61dc62a12b8959f6fa444af7ee689a14f3e56bdbf499", size = 33170, upload-time = "2025-04-09T17:40:53.353Z" },
 ]
 
 [[package]]
@@ -1264,7 +1263,7 @@ wheels = [
 
 [[package]]
 name = "jupyter-server-ydoc"
-version = "2.1.0"
+version = "1.1.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "jsonschema" },
@@ -1275,9 +1274,9 @@ dependencies = [
     { name = "pycrdt" },
     { name = "pycrdt-websocket" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c3/dd/3ddab2425ad49c8cb2188f888a818f770d7c788cb180e7c96bc34788c1b0/jupyter_server_ydoc-2.1.0.tar.gz", hash = "sha256:b526be684aa621ebfd972c18a54ca7c613c67f2d051cf52d7a26aa092f735a46", size = 27726, upload-time = "2025-07-02T12:38:59.77Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/e2/b8/af8d5121861cac76f2b61d6bda1e4d79a15cf53a7c73da3b553023138896/jupyter_server_ydoc-1.1.2.tar.gz", hash = "sha256:299929280bb9263601a75860257531287b5aa0367c59fdf47c2d49be7ed48fa0", size = 26576, upload-time = "2025-04-09T17:40:21.254Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e3/3a/26aa142dbcdcf26a2687511d1cf26e018152e467cdd75a325edc8283f945/jupyter_server_ydoc-2.1.0-py3-none-any.whl", hash = "sha256:f716186fe928a6aa695107fa68a640e5c890c46b3cee4a10701e3b050ce5d865", size = 30813, upload-time = "2025-07-02T12:38:57.941Z" },
+    { url = "https://files.pythonhosted.org/packages/fc/84/eca59301c5b578402fb24953fa08252363734946e20b01b84392d4725bdb/jupyter_server_ydoc-1.1.2-py3-none-any.whl", hash = "sha256:1d319dcf45c65179f34998baa487b52e9106b44d3397b66f8b307ce70f799ed1", size = 29923, upload-time = "2025-04-09T17:40:19.266Z" },
 ]
 
 [[package]]
@@ -1534,7 +1533,7 @@ requires-dist = [
     { name = "click", specifier = ">=8.1.8" },
     { name = "datalayer-pycrdt", specifier = "==0.12.17" },
     { name = "ipykernel" },
-    { name = "jupyter-collaboration", specifier = "==4.0.2" },
+    { name = "jupyter-collaboration", specifier = "==3.1.2" },
     { name = "jupyter-mcp-server", specifier = ">=0.11.0" },
     { name = "jupyterlab", specifier = "==4.4.1" },
     { name = "mcpstack", specifier = ">=0.0.2" },
